@@ -3,11 +3,14 @@
   "version": "1.0.0",
   "type": "module",
   "description": "",
-  "main": "index.js",
+  "main": "server.ts",
   "scripts": {
     "build": "tsc && prisma generate && prisma migrate deploy",
     "dev": "nodemon src/server.ts",
     "start": "node ./dist/src/server.js"
+  },
+  "engines" : { 
+    "node" : "16.16.0"
   },
   "keywords": [],
   "author": "",
@@ -19,7 +22,16 @@
     "@types/jest": "^27.5.0",
     "@types/joi": "^17.2.3",
     "@types/node": "^16.3.3",
-    "@types/supertest": "^2.0.11",
+    "@types/supertest": "^2.0.11"
+  },
+  "dependencies": {
+    "@prisma/client": "^3.13.0",
+    "cors": "^2.8.5",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "express-async-errors": "^3.1.1",
+    "joi": "^17.4.1",
+    "react-player": "^2.10.0",
     "dotenv-cli": "^5.1.0",
     "eslint": "^7.32.0",
     "jest": "^28.0.3",
@@ -29,14 +41,5 @@
     "ts-jest": "^28.0.0",
     "ts-node": "^10.7.0",
     "typescript": "^4.6.4"
-  },
-  "dependencies": {
-    "@prisma/client": "^3.13.0",
-    "cors": "^2.8.5",
-    "dotenv": "^10.0.0",
-    "express": "^4.17.1",
-    "express-async-errors": "^3.1.1",
-    "joi": "^17.4.1",
-    "react-player": "^2.10.0"
   }
 }
