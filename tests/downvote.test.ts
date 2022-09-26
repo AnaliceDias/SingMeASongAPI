@@ -15,7 +15,7 @@ beforeEach(async () => {
     idRecommendations = idRecommendations[0].id;
 });
 
-describe("Downvote tests" , () => {
+describe("POST /recommendations/:id/downvote" , () => {
     it("Vote for a non-existent option" , async () => {
         const result = await supertest(app).post("/recommendations/-1/downvote").send()
         const status = result.status;

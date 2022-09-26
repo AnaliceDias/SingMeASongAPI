@@ -11,7 +11,7 @@ beforeEach(async () => {
 
 });
 
-describe("Get tests" , () => {
+describe("GET /recommendations" , () => {
     it("Get test" , async () => {
         const result = await supertest(app).get("/recommendations");
         const status = result.status;

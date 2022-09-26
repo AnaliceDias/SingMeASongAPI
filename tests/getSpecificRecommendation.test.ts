@@ -15,7 +15,7 @@ beforeEach(async () => {
     idRecommendations = idRecommendations[0].id;
 });
 
-describe("Get specific recommendation tests" , () => {
+describe("GET /recommendations/:id" , () => {
     it("Get specific recommendation test" , async () => {
         const result = await supertest(app).get(`/recommendations/${idRecommendations}`);
         const status = result.status;

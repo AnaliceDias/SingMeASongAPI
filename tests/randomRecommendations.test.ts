@@ -7,7 +7,7 @@ beforeEach(async () => {
     await prisma.$executeRaw`TRUNCATE TABLE recommendations;`;
 });
 
-describe("Get random recommendation tests" , () => {
+describe("GET /recommendations/random" , () => {
     it("Empty database" , async () => {
         const result = await supertest(app).get("/recommendations/random");
         const status = result.status;
